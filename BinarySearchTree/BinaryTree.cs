@@ -26,6 +26,25 @@ namespace BinarySearchTree
 
         // A utility function to insert a new key to BST
 
+        public bool Search(int key)//UC3
+        {
+            return SearchRec(root, key);
+        }
+
+        bool SearchRec(Node root, int key)
+        {
+            // Base Cases: root is null or key is present at root
+            if (root == null || root.key == key)
+                return root != null;
+
+            // val is greater than root's key
+            if (root.key < key)
+                return SearchRec(root.right, key);
+
+            // val is less than root's key
+            return SearchRec(root.left, key);
+        }
+
         public int Size()//UC2
         {
             return SizeRec(root);

@@ -20,8 +20,9 @@
             bst.Insert(63);
             bst.Insert(67);
             bst.Insert(22);
+            bool search = bst.Search(60);
             int size = bst.Size();
-            Console.WriteLine(size);
+            Console.WriteLine(search);
 
         }
     }
