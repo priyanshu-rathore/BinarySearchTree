@@ -25,7 +25,7 @@ namespace BinarySearchTree
         Node root;
 
         // A utility function to insert a new key to BST
-        public void Insert(int key)
+        public void Insert(int key)//UC1
         {
             root = InsertRec(root, key);
         }
