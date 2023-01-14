@@ -25,6 +25,17 @@ namespace BinarySearchTree
         Node root;
 
         // A utility function to insert a new key to BST
+
+        public int Size()//UC2
+        {
+            return SizeRec(root);
+        }
+
+        int SizeRec(Node root)
+        {
+            if (root == null) return 0;
+            else return (SizeRec(root.left) + 1 + SizeRec(root.right));
+        }
         public void Insert(int key)//UC1
         {
             root = InsertRec(root, key);
